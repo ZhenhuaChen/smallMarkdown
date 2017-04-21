@@ -10,4 +10,5 @@ The editor is more a stub than a complete Markdown editor. Use this as a base fo
 1. From <http://nwjs.io/>, download the right version of Node-Webkit and extract the contents to the folder.
 1. Voila, you're done. You might want to read [something](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps) about packaging and distributing Node-Webkit apps.
 
-![The editor](/img/md-complete.jpg)
+![The editor](/img/UI1.jpg)
+![The editor](/img/UI2.jpg)
