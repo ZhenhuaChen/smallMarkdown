@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Markdown Editor</title>
+	<link rel="stylesheet" type="text/css" href="../css/screen.css" media="screen" />
+	<script src="../js/jquery/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/taboverride/taboverride.min.js"></script>
+	<script src="../js/vue.js"></script>
+	<script type="text/javascript">
+		global.window = window;
+		global.$ = $;
+		global.gui = require('nw.gui');
+		init();
+	</script>
+</head>
+<body>
+	<div id="app">
+	<div class="box">
+		<nav id="nav" :class="{nav:doout,'initnav':!doout}">
+			<span class="navbar" >
+				<img src="../img/箭头right.png" alt="" v-if="doout" @click="shownav"/>
+				<img src="../img/箭头left.png" alt="" v-if="! doout" @click="hidenav">
+			</span>
+			<p style="margin-top:40px;"><img src="../img/新建.png" alt="" />新建文件</p>
+			<p><img src="../img/打开.png" alt="" />打开文件</p>
+			<p><img src="../img/保存.png" alt="" />保存文件</p>
+			<p><img src="../img/指南.png" alt="" />操作指南</p>
+			<p class="version">版本 &nbsp &nbsp 0.0.1</p> 
+			<p class="update"><span>更新</span></p> 
+		</nav>
+		<div id="content" :class="{content:is_nav}">
+			<header class="header"><div class="title">{{file_name}}<span class="closefile" @click="close"><img src="../img/x.png" alt=""></span></div></header>
+			<input style="display:none;" id="openFileDialog" type="file" />
+		    <input style="display:none;" type="file"  id="saveFileDialog" nwsaveas="file.md" />
+		    <textarea name="markdown" id="editor" :class="{md_editor:is_show,'md_editor2': !is_show }"></textarea>
+		    <div class="md_result" v-if="is_show">
+		    </div>
+        </div>
+	</div>
+	<footer class="footer">
+		<div>
+			<img src="../img/eye.png" alt="" class="yelloweye" @click="dohide" v-if="! preview">
+			<img src="../img/whiteeye.png" alt="" class="whiteeye" @click="doshow" v-if="preview">
+        </div>
+	</footer>
+	</div>
+</body>
+<script language="javascript">
+var app = new Vue({
+  el:'#app',
+  data: {
+    file_name: 'undefined',
+	preview:true,
+	is_show:false,
+	doout:true,
+	is_nav:false,
+  },
+  methods:{
+	doshow(){
+		this.is_show = true;
+		this.preview = false
+	},
+	dohide(){
+		this.is_show = false;
+		this.preview = true;
+	},
+	// close(){
+	// 	this.
+	// }
+	
+	shownav(){
+		this.doout = false;
+		this.is_nav = true;
+	},
+	hidenav(){
+		this.doout = true;
+		this.is_nav = false;
+	}
+
+
+  },
+   computed : {
+     
+  },
+  components:{
+  },
+  watch : {
+    
+  }
+})
+</script>
+
+</html>
