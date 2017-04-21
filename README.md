@@ -1,14 +1,18 @@
 # Node-Webkit Markdown Editor
-A very simple Markdown editor created with Node Webkit. This code is part of a tutorial: <http://ducode.org/node-webkit-tutorial-creating-a-markdown-editor.html>. The code is released under the MIT license, so do what you want with the code.
+一个利用node-webkit实现的简单的Markdown文法编辑器。后期继续丰腴
+## 使用方法
+``
+git clone https://github.com/ZhenhuaChen/smallMarkdown
+``
+<br/>
 
-The editor is more a stub than a complete Markdown editor. Use this as a base for your own Markdown editor.
+``
+npm install
+``
+<br />
+去node-webkit官网下载:https://nwjs.io/最新nwjs.app
 
-## Installation
 
-1. Obviously, download the code to your favourite location.
-1. With the command line, go to the folder and run `npm install`. This will install the dependencies for the editor.
-1. From <http://nwjs.io/>, download the right version of Node-Webkit and extract the contents to the folder.
-1. Voila, you're done. You might want to read [something](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps) about packaging and distributing Node-Webkit apps.
 
 ![The editor](/img/UI1.jpg)
 ![The editor](/img/UI2.jpg)
