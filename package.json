@@ -1,21 +1,14 @@
-	{
-	  "name": "markdown_editor",
-	  "main": "./html/index.html",
-	  "single-instance": false,
-	  "dependencies": {
-		"marked": "^0.3.3"
-	  },
-		"window": {
-        "title": "node-webkit demo",
-        "icon": "link.png",
-        "toolbar": true,
-				"show": true,
-        "width": 800,
-        "height": 800,
-        "position": "mouse",
-        "min_width": 400,
-        "min_height": 200,
-        "max_width": 800,
-        "max_height": 600
-    }
-	}
+{
+  "name": "small-mark-down",
+  "version": "0.1.0",
+  "description": "A small markdown editor",
+  "author": "ChenZhenhua",
+  "devDependencies": {
+    "electron": "~1.6.2",
+	  "marked": "^0.3.3"
+  },
+  "main": "js/main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
