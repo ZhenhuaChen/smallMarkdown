@@ -8,15 +8,9 @@
 	<script type="text/javascript" src="../js/main.js"></script>
 	<script type="text/javascript" src="../js/taboverride/taboverride.min.js"></script>
 	<script src="../js/vue.js"></script>
-	<script type="text/javascript">
-		global.window = window;
-		global.$ = $;
-		global.gui = require('nw.gui');
-		init();
-	</script>
 </head>
 <body>
-	<div id="app">
+	<div id="myapp">
 	<div class="box">
 		<nav id="nav" :class="{nav:doout,'initnav':!doout}">
 			<span class="navbar" >
@@ -48,8 +42,8 @@
 	</div>
 </body>
 <script language="javascript">
-var app = new Vue({
-  el:'#app',
+var myapp = new Vue({
+  el:'#myapp',
   data: {
     file_name: 'undefined',
 	preview:true,
